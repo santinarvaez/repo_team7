@@ -22,9 +22,9 @@ public class ProductosServiceImp implements IProductoService {
 	
 	List<Producto> productos = new ArrayList<Producto>();
 	public ProductosServiceImp() {
-		Producto e1 = new Producto("Notebook", 1234, 50000, "Hp", 1000 );
-		Producto e2 = new Producto("impresora", 1234, 3000, "Hp", 1050);
-		Producto e3 = new Producto("Cartucho de tinta", 1234, 2000, "Hp", 510);
+		Producto e1 = new Producto("Notebook", 1256, 50000, "Hp", 1000 );
+		Producto e2 = new Producto("impresora", 1264, 3000, "Hp", 1050);
+		Producto e3 = new Producto("Cartucho de tinta", 1274, 2000, "Hp", 510);
 		this.productos.add(e1);
 		this.productos.add(e2);
 		this.productos.add(e3);
@@ -55,5 +55,17 @@ public class ProductosServiceImp implements IProductoService {
 	@Override
 	public List<Producto> getAllProductos() {
 		return this.productos;
+	}
+	
+	@Override
+	public Producto getProductoForId(int id) {
+		Producto prod = new Producto();
+		for(Producto p: productos) {
+			if(p.getCodigo() == id) {
+				prod = p; 
+			}
+		}
+		LOGGER.info("--------------->PRODUCTOIMP"+prod.getNombre());
+	return prod;
 	}
 }
