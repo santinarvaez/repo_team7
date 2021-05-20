@@ -31,12 +31,15 @@ public class Cliente {
 	public int getNumeroTelefono() {
 		return numeroTelefono;
 	}
+	
 	public void setNumeroTelefono(int numeroTelefono) {
 		this.numeroTelefono = numeroTelefono;
 	}
+	
 	public String getTipoDocumento() {
 		return tipoDocumento;
 	}
+	
 	public void setTipoDocumento(String tipoDocumento) {
 		this.tipoDocumento = tipoDocumento;
 	}
@@ -108,6 +111,7 @@ public class Cliente {
 		this.numeroTelefono = numeroTelefono;
 		this.fechaUltimaCompra = fechaUltimaCompra;
 	}
+	
 	// calcular la edad
 	public int getEdad() {
 		
@@ -117,7 +121,8 @@ public class Cliente {
 		edad = periodo.getYears();
 		return edad;
 	}
-	// proximo cumpleaños
+	
+/*	// proximo cumpleaños
 	public String getTimeCumple() {
 		String texto =" ";
 		LocalDate hoy =LocalDate.now();
@@ -141,6 +146,7 @@ public class Cliente {
 		
 				return texto;
 	}
+	
 	// tiempo desde Nacimiento
 	public int getTimeNaciMiento() {
 		LocalDate hoy =LocalDate.now();
@@ -167,6 +173,6 @@ public class Cliente {
 				+ nombreApellido + ", email=" + email + ", password=" + password + ", fechaNacimiento="
 				+ fechaNacimiento + ", edad=" + edad + ", codigoAreaTelefono=" + codigoAreaTelefono
 				+ ", numeroTelefono=" + numeroTelefono + ", fechaUltimaCompra=" + fechaUltimaCompra + "]";
-	}
+	}*/
 	
 }
